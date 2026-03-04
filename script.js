@@ -1,6 +1,6 @@
 const myLibrary = [];
 
-function Book(title, author, pages, read, id) {
+function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -8,6 +8,6 @@ function Book(title, author, pages, read, id) {
     this.id = crypto.randomUUID();
 }
 
-function addBookToLibrary(title) {
-    
+function addBookToLibrary(title, author, pages, read) {
+    myLibrary.push(new Book(title, author, pages,read));
 }
