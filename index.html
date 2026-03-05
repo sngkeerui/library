@@ -19,10 +19,25 @@
                 </tr>
             </thead>
             <tbody id="table-body">
-                
             </tbody>
         </table>
+        <button id="new-book">New Book</button>
     </main>
+    <dialog>
+        <form action="" method="dialog">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author">
+            <label for="pages">Pages</label>
+            <input type="number" name="pages" id="pages">
+            <label for="is-read">Read</label>
+            <input type="radio" name="status" id="is-read" value="is-read">
+            <label for="unread">Not Read</label>
+            <input type="radio" name="status" id="unread" value="unread">
+            <button type="submit">Submit</button>
+        </form>
+    </dialog>
     <script src="script.js" defer></script>
 </body>
 </html>
