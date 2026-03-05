@@ -27,3 +27,10 @@ function displayBook() {
         tableBody.appendChild(row);
     })
 }
+
+const newBook = document.getElementById("new-book");
+const dialog = document.querySelector("dialog");
+
+newBook.addEventListener("click", () => {
+    dialog.showModal();
+})
