@@ -6,3 +6,17 @@ main {
     align-items: center;
     min-height: 100vh;
 }
+
+table {
+    font-family: "Roboto", sans-serif;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 1em;
+}
+
+td {
+    text-align: center;
+}
