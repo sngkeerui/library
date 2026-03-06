@@ -45,5 +45,7 @@ myForm.addEventListener("submit", (e) => {
     const status = formData.get("status") === "is-read";
     addBookToLibrary(title, author, pages, status);
     displayBook();
+    dialog.close();
+    myForm.reset();
 })
 
