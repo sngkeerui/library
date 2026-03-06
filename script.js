@@ -4,7 +4,7 @@ function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = Number(pages);
-    this.read = Boolean(read);
+    this.read = read ? "Read" : "Not Read";
     this.id = crypto.randomUUID();
 }
 
@@ -34,3 +34,16 @@ const dialog = document.querySelector("dialog");
 newBook.addEventListener("click", () => {
     dialog.showModal();
 })
+
+const myForm = document.querySelector("form");
+myForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(myForm);
+    const title = formData.get("title");
+    const author = formData.get("author");
+    const pages = formData.get("pages");
+    const status = formData.get("status") === "is-read";
+    addBookToLibrary(title, author, pages, status);
+    displayBook();
+})
+
