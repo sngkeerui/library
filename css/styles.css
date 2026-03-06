@@ -9,6 +9,22 @@ main {
     gap: 20px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    gap: 20px;
+}
+
+label {
+    width: 5rem;
+}
+
 table {
     font-family: "Roboto", sans-serif;
     border-collapse: collapse;
