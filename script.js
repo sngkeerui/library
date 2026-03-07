@@ -1,4 +1,4 @@
-const myLibrary = [];
+let myLibrary = [];
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -16,7 +16,7 @@ const tableBody = document.getElementById("table-body");
 
 function displayBook() {
     tableBody.textContent = "";
-    myLibrary.forEach((book) => {
+    myLibrary.forEach((book, index) => {
         const row = document.createElement("tr");
         const properties = [book.title, book.author, book.pages, book.read, book.id];
         properties.forEach(text => {
@@ -24,6 +24,15 @@ function displayBook() {
             cell.textContent = text;
             row.appendChild(cell);
         })
+        const delCell = document.createElement("td");
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "Delete";
+        delBtn.addEventListener("click", () => {
+            myLibrary.splice(index, 1);
+            displayBook();
+        })
+        delCell.appendChild(delBtn);
+        row.appendChild(delCell);
         tableBody.appendChild(row);
     })
 }
